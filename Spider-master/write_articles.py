@@ -9,7 +9,7 @@ class Articles:
         self.page_url = page_url
 
     def write_article(self):
-        with open('articles.csv', 'a') as csvfile:
+        with open('articles.csv', 'a') as articles:
             data = [self.headline, self.page_url]
-            csvwriter = csv.writer(csvfile)
-            csvwriter.writerow(data)
+            writer = csv.writer(articles)
+            writer.writerow(data)

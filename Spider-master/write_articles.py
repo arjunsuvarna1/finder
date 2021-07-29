@@ -7,9 +7,9 @@ class Articles:
         super().__init__()
         self.headline = headline
         self.page_url = page_url
-
+        self.name = 'articles.csv'
     def write_article(self):
-        with open('articles.csv', 'a') as articles:
+        with open(self.name, 'a') as articles:
             data = [self.headline, self.page_url]
             writer = csv.writer(articles)
             writer.writerow(data)

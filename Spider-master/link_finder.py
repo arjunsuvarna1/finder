@@ -28,7 +28,7 @@ class LinkFinder(HTMLParser):
                         self.links.add(url)
 
     def handle_data(self, data):
-        if self.recording and not data.isspace():
+        if self.title and not data.isspace():
             article = Articles(data, self.page_url)
             article.write_article()
             self.title = False
